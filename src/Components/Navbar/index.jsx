@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ShoppingCartContext } from '../../Context'
+import { ShoppingCartIcon } from '../../Icons'
 
 export function Navbar () {
   const { count } = useContext(ShoppingCartContext)
@@ -51,8 +52,8 @@ export function Navbar () {
             </NavLink>
           </li>
         ))}
-        <li>
-          🛒 {count}
+        <li className='flex items-center'>
+          <ShoppingCartIcon /> {count}
         </li>
       </ul>
     </nav>
